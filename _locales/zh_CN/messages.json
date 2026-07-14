@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "页序"
+  },
+  "extensionDescription": {
+    "message": "按网站整理标签页，并通过中英文新标签页面板管理所有 Chrome 窗口。"
+  },
+  "actionTitle": {
+    "message": "页序"
+  }
+}

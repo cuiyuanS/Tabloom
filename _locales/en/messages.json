@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "Tabloom"
+  },
+  "extensionDescription": {
+    "message": "Organize tabs by domain and manage every Chrome window from a bilingual new-tab dashboard."
+  },
+  "actionTitle": {
+    "message": "Tabloom"
+  }
+}
