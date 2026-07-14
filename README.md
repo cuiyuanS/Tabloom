@@ -35,6 +35,11 @@ https://github.com/cuiyuanS/Tabloom
 ### 功能
 
 - 按网站查看所有窗口中的标签页
+- 在网站分组上方使用 Google、百度和用户自定义快捷入口
+- 可选自动整理新打开的网页标签页，开启时立即整理当前窗口
+- 可选自动冻结闲置 30 分钟的网页标签页以释放内存
+- 可配置忽略域名、禁止分组域名和自定义分组名称
+- 自动跟随浏览器明暗模式，并提供四套强调色
 - 集中整理 Gmail、X、YouTube、LinkedIn 和 GitHub 首页
 - 跨窗口跳转、关闭单个标签页或整个分组
 - 检测并一键清理完全重复的页面
@@ -45,7 +50,9 @@ https://github.com/cuiyuanS/Tabloom
 
 ### 隐私
 
-扩展不使用作者的服务器，也不会向作者发送浏览记录、标签页标题或网址。设置和稍后阅读内容保存在 `chrome.storage.sync` 中；Chrome 可能根据你的账号同步设置在设备之间同步这些数据。
+扩展不使用作者的服务器，也不会向作者发送浏览记录、标签页标题或网址。设置、快捷入口和稍后阅读内容保存在 `chrome.storage.sync` 中；自动冻结的活动时间保存在仅当前会话有效的 `chrome.storage.session` 中。Chrome 可能根据你的账号同步设置在设备之间同步 `chrome.storage.sync` 数据。
+
+自动冻结不会关闭标签页。再次点击后 Chrome 会重新加载页面，但滚动位置和未保存状态能否完整恢复取决于网站和浏览器。
 
 ## English
 
@@ -74,6 +81,11 @@ It usually takes about one minute.
 ### Features
 
 - View tabs from every window grouped by website
+- Launch Google, Baidu, and user-defined sites above the website groups
+- Optionally group newly opened web tabs automatically and organize the current window when enabled
+- Optionally discard web tabs after 30 minutes of inactivity to release memory
+- Configure ignored domains, blocked domains, and custom group names
+- Follow the browser color scheme with four selectable accent palettes
 - Collect Gmail, X, YouTube, LinkedIn, and GitHub homepages together
 - Jump across windows and close individual tabs or complete groups
 - Detect and remove exact duplicate pages with one click
@@ -84,4 +96,6 @@ It usually takes about one minute.
 
 ### Privacy
 
-The extension does not use the author's servers and does not send browsing history, tab titles, or URLs to the author. Settings and saved pages use `chrome.storage.sync`; Chrome may synchronize this data between devices according to your account settings.
+The extension does not use the author's servers and does not send browsing history, tab titles, or URLs to the author. Settings, quick links, and saved pages use `chrome.storage.sync`. Automatic-freeze activity timestamps stay in session-only `chrome.storage.session`. Chrome may synchronize `chrome.storage.sync` data between devices according to your account settings.
+
+Automatic freezing does not close tabs. Chrome reloads the page when you return, but exact scroll position and unsaved state restoration depend on the site and browser.
