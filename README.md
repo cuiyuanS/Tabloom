@@ -37,6 +37,7 @@ https://github.com/cuiyuanS/Tabloom
 - 按网站查看所有窗口中的标签页
 - 在网站分组上方使用 Google、百度和用户自定义快捷入口
 - 可选自动整理新打开的网页标签页，开启时立即整理当前窗口
+- 页序创建的 Chrome 标签组仅在当前浏览器会话内保留，重启后自动拆组
 - 可选自动冻结闲置 30 分钟的网页标签页以释放内存
 - 可配置忽略域名、禁止分组域名和自定义分组名称
 - 自动跟随浏览器明暗模式，并提供四套强调色
@@ -83,6 +84,7 @@ It usually takes about one minute.
 - View tabs from every window grouped by website
 - Launch Google, Baidu, and user-defined sites above the website groups
 - Optionally group newly opened web tabs automatically and organize the current window when enabled
+- Keep Chrome tab groups created by Tabloom only for the current browser session and ungroup them after restart
 - Optionally discard web tabs after 30 minutes of inactivity to release memory
 - Configure ignored domains, blocked domains, and custom group names
 - Follow the browser color scheme with four selectable accent palettes
