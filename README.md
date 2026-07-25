@@ -1,103 +1,77 @@
-# Tabloom｜页序
+# Tabloom | 页序
 
-> This repository contains the packaged Chrome extension only. It does not contain the TypeScript or React source code.
+> This public repository contains the packaged Chrome extension only. It does not contain Tabloom's private TypeScript or React source code.
 >
-> 本仓库只包含可安装的 Chrome 扩展构建产物，不包含 TypeScript 或 React 源码。
+> 本公开仓库仅包含可安装的 Chrome 扩展构建产物，不包含页序的私有 TypeScript 或 React 源码。
 
-Tabloom（中文名：页序）会把所有 Chrome 窗口中的标签页按网站整理到一个干净的新标签页工作台中。
+Tabloom is a new-tab command center that groups tabs by domain across every Chrome window, brings quick links, saved pages, and settings together, and keeps selected text in a private local clipboard.
 
-Tabloom organizes tabs from every Chrome window into a clean new-tab workspace grouped by website.
+页序是一个 Chrome 新标签页指挥中心：它按域名聚合所有窗口中的标签页，集中快捷入口、稍后阅读与设置，并用私密的本地划词剪切板保存重要内容。
 
-## 中文
+## Install / 安装
 
-### 使用编程代理安装
+### Chrome Web Store (recommended) / Chrome 应用商店（推荐）
 
-把下面的地址发送给 Claude Code、Codex 等编程代理，并告诉它：
+[Install Tabloom from the Chrome Web Store / 从 Chrome 应用商店安装页序](https://chromewebstore.google.com/detail/ljhcfhoahkhngdmgpgpldaacdgimifbh?utm_source=item-share-cb)
 
-> 安装这个 Chrome 扩展。下载仓库后，指导我在 `chrome://extensions` 中加载它。
+Chrome Web Store review and rollout may lag behind the newest release. The latest packaged build is available from [GitHub Releases](https://github.com/cuiyuanS/Tabloom/releases).
 
-```text
-https://github.com/cuiyuanS/Tabloom
-```
+Chrome 应用商店的审核与分批发布可能稍有延迟。如需最新打包版本，请前往 [GitHub Releases](https://github.com/cuiyuanS/Tabloom/releases)。
 
-通常约需 1 分钟。
+### Install the release ZIP / 安装 Release 压缩包
 
-### 手动安装
+1. Download `tabloom-0.1.2-chrome-web-store.zip` from [GitHub Releases](https://github.com/cuiyuanS/Tabloom/releases) and extract it.
+2. Open `chrome://extensions`, enable **Developer mode**, and click **Load unpacked**.
+3. Select the extracted folder that directly contains `manifest.json`.
 
-1. 点击 GitHub 页面上的 **Code -> Download ZIP**。
-2. 解压下载的 ZIP 文件。
-3. 在 Chrome 地址栏打开 `chrome://extensions`。
-4. 开启右上角的“开发者模式”。
-5. 点击“加载已解压的扩展程序”。
-6. 选择解压后直接包含 `manifest.json` 的文件夹。
-7. 打开一个新标签页，即可使用页序。
+4. 从 [GitHub Releases](https://github.com/cuiyuanS/Tabloom/releases) 下载 `tabloom-0.1.2-chrome-web-store.zip` 并解压。
+5. 打开 `chrome://extensions`，开启“开发者模式”，然后点击“加载已解压的扩展程序”。
+6. 选择内部直接包含 `manifest.json` 的解压文件夹。
 
-### 功能
+### Load this repository / 加载本仓库
 
-- 按网站查看所有窗口中的标签页
-- 在网站分组上方使用 Google、百度和用户自定义快捷入口
-- 可选自动整理新打开的网页标签页，开启时立即整理当前窗口
-- 页序创建的 Chrome 标签组仅在当前浏览器会话内保留，重启后自动拆组
-- 可选自动冻结闲置 30 分钟的网页标签页以释放内存
-- 可配置忽略域名、禁止分组域名和自定义分组名称
-- 自动跟随浏览器明暗模式，并提供四套强调色
-- 集中整理 Gmail、X、YouTube、LinkedIn 和 GitHub 首页
-- 跨窗口跳转、关闭单个标签页或整个分组
-- 检测并一键清理完全重复的页面
-- 将页面保存到稍后阅读清单和归档
-- 显示 localhost 端口，区分本地开发项目
-- 中英文界面
-- 微信与支付宝打赏
+As an unpacked fallback, download or clone this repository, open `chrome://extensions`, enable **Developer mode**, click **Load unpacked**, and select the repository root containing `manifest.json`.
 
-### 隐私
+作为备选方式，可下载或克隆本仓库，打开 `chrome://extensions`，开启“开发者模式”，点击“加载已解压的扩展程序”，并选择直接包含 `manifest.json` 的仓库根目录。
 
-扩展不使用作者的服务器，也不会向作者发送浏览记录、标签页标题或网址。设置、快捷入口和稍后阅读内容保存在 `chrome.storage.sync` 中；自动冻结的活动时间保存在仅当前会话有效的 `chrome.storage.session` 中。Chrome 可能根据你的账号同步设置在设备之间同步 `chrome.storage.sync` 数据。
+## Product / 产品
 
-自动冻结不会关闭标签页。再次点击后 Chrome 会重新加载页面，但滚动位置和未保存状态能否完整恢复取决于网站和浏览器。
+![Tabloom command center](store-assets/01-command-center.png)
 
-## English
+![Tabloom tabs and highlights](store-assets/02-tabs-and-highlights.png)
 
-### Install with a coding agent
+![Tabloom complete workflow](store-assets/03-complete-workflow.png)
 
-Send this repository to Claude Code, Codex, or another coding agent and say:
+### 中文功能
 
-> Install this Chrome extension. Download the repository and guide me through loading it in `chrome://extensions`.
+- 按域名聚合所有 Chrome 窗口中的标签页，跨窗口跳转，检测重复页面，并关闭单个标签页或整组页面。
+- 在新标签页指挥中心集中使用域名分组、快捷入口、稍后阅读队列与归档、剪切板历史和统一设置。
+- 自动整理新打开标签页与闲置 30 分钟后自动释放内存均为可选功能，默认关闭；也可设置忽略域名、禁止分组域名和自定义组名。
+- 在普通 HTTP/HTTPS 网页上划词，选择颜色后自动高亮、复制并保存到本地剪切板。
+- 重新打开同一完整网址时会尽力恢复高亮；网页结构变化后可能无法恢复，但历史记录仍会保留。
+- 按今天、昨天和具体日期查看历史，删除记录、撤销删除、跳转来源页，或一键再次复制。
+- 最多置顶 5 条记录；可添加本地备注，或复制“划词 + 页面标题 + 来源网址”。
+- 在浏览器本地导出 Markdown 或完整 JSON 备份。
+- 支持中英文界面、明暗模式、四套强调色，并保留 localhost 端口以区分本地项目。
 
-```text
-https://github.com/cuiyuanS/Tabloom
-```
+### English features
 
-It usually takes about one minute.
+- Group tabs by domain across every Chrome window, jump to an existing tab, find exact duplicates, and close one tab or a complete group.
+- Use the new-tab command center for domain groups, quick links, the saved-for-later queue and archive, full clipboard history, and immediate settings access.
+- Automatic grouping of newly opened tabs and automatic memory release after 30 minutes of inactivity are optional and off by default. Ignored domains, blocked domains, and custom group names are configurable.
+- Select text on ordinary HTTP/HTTPS pages, choose a color, and automatically highlight, copy, and save it in the local clipboard.
+- Tabloom makes a best-effort attempt to restore highlights when the exact URL is revisited. Restoration may fail after the page structure changes, while the history record remains available.
+- Browse history by Today, Yesterday, or date; delete a record, undo deletion, return to its source, or copy it again with one click.
+- Pin up to five records, add private local notes, and copy a selection together with its page title and source URL.
+- Export Markdown or a complete JSON backup locally in the browser.
+- Use English or Simplified Chinese, follow the browser's light or dark appearance, choose among four accent palettes, and keep localhost ports visible.
 
-### Manual installation
+## Privacy / 隐私
 
-1. Click **Code -> Download ZIP** on GitHub.
-2. Extract the downloaded ZIP archive.
-3. Open `chrome://extensions` in Chrome.
-4. Enable **Developer mode** in the top-right corner.
-5. Click **Load unpacked**.
-6. Select the extracted folder that directly contains `manifest.json`.
-7. Open a new tab to start using Tabloom.
+Tabloom has no author-operated backend and does not send browsing history, tab titles, URLs, or clipboard records to the author. Settings, quick links, and saved pages use `chrome.storage.sync`; Chrome may synchronize that data according to the user's Chrome account settings. Automatic-discard activity timestamps stay in session-only `chrome.storage.session`.
 
-### Features
+The selection clipboard stores selected text, page titles, source URLs, colors, timestamps, notes, and optional highlight anchors only in `chrome.storage.local`. It keeps at most 500 records, does not use Chrome Sync, and does not upload them to an external service. Markdown and JSON exports are generated locally. Clipboard behavior is limited to ordinary HTTP/HTTPS pages and excludes inputs, textareas, and editable regions.
 
-- View tabs from every window grouped by website
-- Launch Google, Baidu, and user-defined sites above the website groups
-- Optionally group newly opened web tabs automatically and organize the current window when enabled
-- Keep Chrome tab groups created by Tabloom only for the current browser session and ungroup them after restart
-- Optionally discard web tabs after 30 minutes of inactivity to release memory
-- Configure ignored domains, blocked domains, and custom group names
-- Follow the browser color scheme with four selectable accent palettes
-- Collect Gmail, X, YouTube, LinkedIn, and GitHub homepages together
-- Jump across windows and close individual tabs or complete groups
-- Detect and remove exact duplicate pages with one click
-- Save pages to a reading queue and archive
-- Keep localhost ports visible for local development projects
-- English and Simplified Chinese interfaces
-- WeChat Pay and Alipay support
+页序没有作者运营的后端，不会向作者发送浏览历史、标签页标题、网址或剪切板记录。设置、快捷入口与稍后阅读数据使用 `chrome.storage.sync`，Chrome 可能根据用户的账号设置同步这些数据。自动释放内存的活动时间仅保存在当前会话的 `chrome.storage.session` 中。
 
-### Privacy
-
-The extension does not use the author's servers and does not send browsing history, tab titles, or URLs to the author. Settings, quick links, and saved pages use `chrome.storage.sync`. Automatic-freeze activity timestamps stay in session-only `chrome.storage.session`. Chrome may synchronize `chrome.storage.sync` data between devices according to your account settings.
-
-Automatic freezing does not close tabs. Chrome reloads the page when you return, but exact scroll position and unsaved state restoration depend on the site and browser.
+划词剪切板使用 `chrome.storage.local` 仅在本机保存所选文字、页面标题、来源网址、颜色、时间、备注与可选高亮锚点，最多 500 条，不参与 Chrome 同步，也不会上传到外部服务。Markdown 和 JSON 导出也在浏览器本地生成。剪切板功能仅适用于普通 HTTP/HTTPS 页面，并排除输入框、文本域和可编辑区域。
