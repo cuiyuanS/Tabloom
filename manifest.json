@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "default_locale": "en",
   "minimum_chrome_version": "116",
   "permissions": [
@@ -20,7 +20,7 @@
   "content_scripts": [
     {
       "js": [
-        "assets/content.ts-loader-DtD7KNbG.js"
+        "assets/content.ts-loader-BvUgIRog.js"
       ],
       "matches": [
         "http://*/*",
@@ -65,8 +65,8 @@
       ],
       "resources": [
         "assets/index-CNgDvd4k.js",
-        "assets/runtimeClient-DeZfsUcP.js",
-        "assets/content.ts-j723y9Ip.js"
+        "assets/runtimeClient-OtBY9bJj.js",
+        "assets/content.ts-CXuTJOhf.js"
       ],
       "use_dynamic_url": false
     }
