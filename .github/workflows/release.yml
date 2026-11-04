@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Determine version
+        id: version
+        run: echo "version=$(node -p "require('./manifest.json').version")" >> "$GITHUB_OUTPUT"
+      - name: Verify release archive
+        run: |
+          test -f "release/tabloom-${{ steps.version.outputs.version }}-chrome-web-store.zip"
+          unzip -t "release/tabloom-${{ steps.version.outputs.version }}-chrome-web-store.zip"
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$TAG" \
+            --title "Tabloom ${{ steps.version.outputs.version }}" \
+            --generate-notes \
+            "release/tabloom-${{ steps.version.outputs.version }}-chrome-web-store.zip"
