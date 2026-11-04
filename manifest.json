@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "default_locale": "en",
   "minimum_chrome_version": "116",
   "permissions": [
@@ -10,6 +10,8 @@
     "clipboardWrite",
     "scripting",
     "storage",
+    "bookmarks",
+    "favicon",
     "tabGroups",
     "tabs"
   ],
@@ -20,7 +22,7 @@
   "content_scripts": [
     {
       "js": [
-        "assets/content.ts-loader-BvUgIRog.js"
+        "assets/content.ts-loader-BydD0Ajy.js"
       ],
       "matches": [
         "http://*/*",
@@ -64,9 +66,63 @@
         "https://*/*"
       ],
       "resources": [
-        "assets/index-CNgDvd4k.js",
-        "assets/runtimeClient-OtBY9bJj.js",
-        "assets/content.ts-CXuTJOhf.js"
+        "assets/index-DB8hzSI0.js",
+        "assets/runtimeClient-pKzMOp75.js",
+        "assets/ar-DtA2LwqZ.js",
+        "assets/am-DU270Y28.js",
+        "assets/bg-CSh99Knk.js",
+        "assets/bn-dtMxFD45.js",
+        "assets/ca-C49Mjn9a.js",
+        "assets/cs-B2WmIrj6.js",
+        "assets/da-CpjyEJLZ.js",
+        "assets/de-D5Zxxt8X.js",
+        "assets/el-0Z9685Xp.js",
+        "assets/en-AU-BNB5MKzn.js",
+        "assets/en-GB-BNB5MKzn.js",
+        "assets/en-US-BNB5MKzn.js",
+        "assets/es-CIv06Nqm.js",
+        "assets/es-419-DQkF2kvo.js",
+        "assets/et-DFDmJfry.js",
+        "assets/fa-oAsI8s8h.js",
+        "assets/fi-3mEpQCY-.js",
+        "assets/fil-CijMyq2k.js",
+        "assets/fr-DeRSUCfu.js",
+        "assets/gu-BLQyOqSR.js",
+        "assets/he-D0GEMjdj.js",
+        "assets/hi-B416kgpc.js",
+        "assets/hr-B0HtyAB3.js",
+        "assets/hu-BKa2WMOr.js",
+        "assets/id-BV0idKd2.js",
+        "assets/it-gV5ov178.js",
+        "assets/ja-BStoTsGX.js",
+        "assets/kn-CtH-p91I.js",
+        "assets/ko-D53YnwQR.js",
+        "assets/lt-lu5Z_527.js",
+        "assets/lv-BMQ2jDiA.js",
+        "assets/ml-CMNsJD8w.js",
+        "assets/mr-DvbQDohG.js",
+        "assets/ms-CND4ZA-n.js",
+        "assets/nl-DuJJ7JOd.js",
+        "assets/no-CaVBcEJA.js",
+        "assets/pl-CZAy0oWK.js",
+        "assets/pt-BR-BPaZlEOE.js",
+        "assets/pt-PT-BSuTXgOU.js",
+        "assets/ro-BV0t9foZ.js",
+        "assets/ru-DhmXrRCT.js",
+        "assets/sk-CAFblSPc.js",
+        "assets/sl-CZj5Btpe.js",
+        "assets/sr-DgUnEDxj.js",
+        "assets/sv-NCc6lUz2.js",
+        "assets/sw-ButH5N1l.js",
+        "assets/ta-BF1Lz_Z0.js",
+        "assets/te-CN8ra8G2.js",
+        "assets/th-DsPyvONC.js",
+        "assets/tr-DbFAmGBM.js",
+        "assets/uk-BkHlyiK4.js",
+        "assets/vi-9UviDcZx.js",
+        "assets/zh-CN-DawYmcTe.js",
+        "assets/zh-TW-CBQpKTE0.js",
+        "assets/content.ts-CqOiglKf.js"
       ],
       "use_dynamic_url": false
     }
